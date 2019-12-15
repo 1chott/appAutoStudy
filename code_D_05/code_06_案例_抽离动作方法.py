@@ -21,15 +21,14 @@ desired_caps["appPackage"] = "com.baidu.homework"
 desired_caps["appActivity"] = "com.baidu.homework.activity.init.InitActivity"   # aapt 获取的启动名 初始化启动
 desired_caps["resetKeyboard"] = True    # 输入中文需要重置输入键盘
 desired_caps["unicodeKeyboard"] = True  # 采用unicode码输入
-desired_caps['noReset'] = True  # 是否重置app (自动化代码运行后是否重置app，默认False 重置)
 
 # 实例化driver对象, 打开 设置页面（设置app）
 driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
 
 
 # 封装查找元素方法，使用try防止报错
-def get_ele(driver_obj, feature):
-    wait = WebDriverWait(driver_obj, 5, 1)
+def get_ele(feature):
+    wait = WebDriverWait(driver, 5, 1)
     try:
         ele = wait.until(lambda x: x.find_element(*feature))
     except Exception as e:
@@ -39,27 +38,48 @@ def get_ele(driver_obj, feature):
         return ele
 
 
+# 封装点击操作， 可传入元素特征或元素对象
+def execute_tap(feature):
+    # 如果feature是元组类型 这调用获取元素的方法， 否则就是元素对象
+    if isinstance(feature, tuple):
+        ele = get_ele(feature)
+    else:
+        ele = feature
+    ele.click()
+
+
+# 封装输入操作， 可传入元素特征或元素对象
+def execute_input(feature, text):
+    if isinstance(feature, tuple):
+        ele = get_ele(feature)
+    else:
+        ele = feature
+    ele.clear()
+    ele.send_keys(text)
+
+
+# 业务流程
 time.sleep(5)
 skip_feature = (By.XPATH, '//*[@text="跳过"]')
-skip_btn = get_ele(driver, skip_feature)
+skip_btn = get_ele(skip_feature)
 
 if skip_btn:
-    skip_btn.click()
+    execute_tap(skip_feature)
 
     student_feature = (By.XPATH, '//*[@text="学生"]')
-    get_ele(driver, student_feature).click()
+    execute_tap(student_feature)
 
     grade_feature = (By.XPATH, '//*[@text="高一"]')
-    get_ele(driver, grade_feature).click()
+    execute_tap(grade_feature)
 
     sub_feature = (By.XPATH, '//*[@text="完成"]')
-    get_ele(driver, sub_feature).click()
+    execute_tap(sub_feature)
     time.sleep(4)
 
     main_feature = (By.CLASS_NAME, 'android.view.View')
-    get_ele(driver, main_feature).click()
+    execute_tap(main_feature)
     time.sleep(2)
-    get_ele(driver, main_feature).click()
+    execute_tap(main_feature)
     time.sleep(5)
 else:
     print("不是第一次启动app")
