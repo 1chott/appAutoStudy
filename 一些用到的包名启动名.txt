@@ -1,0 +1,27 @@
+
+抖音 包名 启动名
+com.ss.android.ugc.aweme
+.main.MainActivity
+
+学车不
+com.bjcsxq.chat.carfriend
+.MainActivity
+
+设置页面
+搜索 按钮 id com.android.settings:id/search
+返回 按钮 class android.widget.ImageButton
+WLAN 按钮 text WLAN
+
+作业帮  包名 启动名
+com.baidu.homework
+.activity.user.passport.ChoiceLoginModeActivity		# adb 命令获取的第一次启动包名
+com.baidu.homework.activity.init.InitActivity	# aapt 获取的启动名
+跳过按钮 Xpath 跳过
+学生按钮 Xpath 学生
+高一按钮 Xpath 高一
+完成确认按钮 Xpath 完成
+弹窗界面随便点2次 classname android.view.View
+
+263 
+包名 com.em.mobile
+启动名 .EmProductActivity
