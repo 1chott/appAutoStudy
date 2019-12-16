@@ -25,3 +25,7 @@ com.baidu.homework.activity.init.InitActivity	# aapt 获取的启动名
 263 
 包名 com.em.mobile
 启动名 .EmProductActivity
+
+网易新闻
+包名 com.netease.newsreader.activity
+启动名 com.netease.nr.phone.main.MainActivity
