@@ -18,6 +18,7 @@ class TestDemoSettings:
     def teardown(self):
         self.driver.quit()
 
+    @pytest.mark.run(order=10)  # 测试用例执行顺序排序
     @pytest.mark.parametrize("info", [{"key": "蓝牙"}, {"key": "WLAN"}])
     def test_demo_1(self, info):
         # 测试用例 打开设置， 点击搜索按钮， 搜索框输入内容
