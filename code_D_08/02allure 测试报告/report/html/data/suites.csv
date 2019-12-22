@@ -1,0 +1,3 @@
+"Status","Name","Duration in ms","Description"
+"passed","test_demo.Testfn#test_fn1","16",""
+"passed","test_demo.Testfn#test_fn2","0",""

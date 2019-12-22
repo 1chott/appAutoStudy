@@ -1,0 +1,50 @@
+{
+  "uid" : "bda4efddfe24350f",
+  "name" : "test_fn1",
+  "fullName" : "test_demo.Testfn#test_fn1",
+  "historyId" : "899bc9e624f7cbe2009ba078e0eb86c0",
+  "time" : {
+    "start" : 1576746215123,
+    "stop" : 1576746215124,
+    "duration" : 1
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_demo"
+  }, {
+    "name" : "subSuite",
+    "value" : "Testfn"
+  }, {
+    "name" : "host",
+    "value" : "WQ-20160115OVPC"
+  }, {
+    "name" : "thread",
+    "value" : "16284-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_demo"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bda4efddfe24350f.json",
+  "parameterValues" : [ ]
+}

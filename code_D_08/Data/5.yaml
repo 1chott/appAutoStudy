@@ -1,0 +1,16 @@
+
+
+login_success :
+  data1 :
+    user : hx
+    password : 123456
+  data2 :
+    user : zz
+    password : 123456
+login_error :
+  data1 :
+    user : hx
+    password : 654321
+  data2 :
+    user : hxx
+    password : 123456

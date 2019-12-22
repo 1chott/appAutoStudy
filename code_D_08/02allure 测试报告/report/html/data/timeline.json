@@ -1,0 +1,37 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "WQ-20160115OVPC",
+    "children" : [ {
+      "name" : "4876-MainThread",
+      "children" : [ {
+        "name" : "test_fn1",
+        "uid" : "d9c234938bd64e1f",
+        "parentUid" : "21ba7b6f40fdcc5569f02549da39b495",
+        "status" : "passed",
+        "time" : {
+          "start" : 1576749193606,
+          "stop" : 1576749193622,
+          "duration" : 16
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_fn2",
+        "uid" : "585f2d2ebf4ce4a3",
+        "parentUid" : "21ba7b6f40fdcc5569f02549da39b495",
+        "status" : "passed",
+        "time" : {
+          "start" : 1576749193622,
+          "stop" : 1576749193622,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "21ba7b6f40fdcc5569f02549da39b495"
+    } ],
+    "uid" : "636d3ce39b4f314a4fe40f4345f3be33"
+  } ]
+}
